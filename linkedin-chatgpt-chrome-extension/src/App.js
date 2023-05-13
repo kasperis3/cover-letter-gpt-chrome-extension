@@ -21,7 +21,9 @@ function App() {
 
   switch (page) {
     case ROUTES.GENERATOR:
-      return <Generator setPage={setPage} />;
+      return (
+        <Generator setPage={setPage} resume={resume} openAIKey={openAIKey} />
+      );
     case ROUTES.PROFILE:
       return (
         <Profile
@@ -33,7 +35,9 @@ function App() {
         />
       );
     default:
-      return <Generator setPage={setPage} />;
+      return (
+        <Generator setPage={setPage} resume={resume} openAIKey={openAIKey} />
+      );
   }
 }
 
